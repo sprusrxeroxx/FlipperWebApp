@@ -43,7 +43,7 @@ def read_swim_data(filename):
     minutes = min_secs // 60
     seconds = min_secs - minutes*60
 
-    averageTime = f"{minutes}:{seconds}.{nano_seconds}"
+    averageTime = f"{minutes}:{seconds:0>2}.{nano_seconds}"
 
     return (Name, Age, Distance, Stroke, times, averageTime, converts) #A tuple containing all the values 
 
