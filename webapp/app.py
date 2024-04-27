@@ -1,4 +1,4 @@
-from flask import Flask, session
+from flask import Flask, session, render_template
 
 import os
 import swimclub
@@ -9,7 +9,7 @@ app.secret_key = "12345"
 
 @app.get("/")
 def index():
-    return "This is a placeholder for your webapp's index page"
+    return render_template("index.html")
 
 def populate_data():
     if "swimmers" not in session:
@@ -26,12 +26,12 @@ def populate_data():
 @app.get("/swimmers")
 def display_swimmers():
     populate_data()
-    return str(sorted(session["swimmers"]))
+    return str(sorted(session["swimmers"])) #returns list of all swimmer names 
 
 @app.get("/files/<swimmer>")
 def get_swimmers_files(swimmer):
     populate_data()
-    return str(session["swimmers"][swimmer])
+    return str(session["swimmers"][swimmer]) #returns swimmer's files associated with name via hashmap
 
 if __name__ == "__main__":
     app.run(debug=True)
