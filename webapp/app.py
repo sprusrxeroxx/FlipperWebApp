@@ -11,7 +11,7 @@ app.secret_key = "12345"
 def index():
     return render_template(
         "index.html",
-        title="Welcome to the Flippers swimclub system",
+        title="Welcome to the Flipper swimclub system",
         )
 
 def populate_data():
