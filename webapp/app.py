@@ -9,7 +9,10 @@ app.secret_key = "12345"
 
 @app.get("/")
 def index():
-    return render_template("index.html")
+    return render_template(
+        "index.html",
+        title="Welcome to the Flippers swimclub system",
+        )
 
 def populate_data():
     if "swimmers" not in session:
