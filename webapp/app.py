@@ -1,4 +1,4 @@
-from flask import Flask, session, render_template
+from flask import Flask, session, render_template, request
 
 import os
 import swimclub
@@ -36,6 +36,17 @@ def display_swimmers():
         select_id="swimmer",
         data=sorted(session["swimmers"]), #returns list of all swimmer names 
         )
+@app.post("/showfiles")
+def display_swimmer_files():
+    populate_data()
+    name= request.form['swimmer']
+    return render_template(
+        "select.html",
+        title="select an event",
+        url="/showbarchart",
+        select_id="file",
+        data=session["swimmers"][name],
+    )
 
 @app.get("/files/<swimmer>")
 def get_swimmers_files(swimmer):
