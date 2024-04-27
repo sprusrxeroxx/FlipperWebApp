@@ -47,7 +47,7 @@ def read_swim_data(filename):
 
     return (Name, Age, Distance, Stroke, times, averageTime, converts) #A tuple containing all the values 
 
-def produce_bar_charts(fn):
+def produce_bar_charts(fn, location=CHARTS):
     """
         Given the name of a swimmer's file, produces the HTML/SVG-based bar chart for the stats.
     
@@ -100,7 +100,7 @@ def produce_bar_charts(fn):
 
     page = header + body + footer
 
-    save_to = f"{CHARTS}{fn.removesuffix('.txt')}.html"
+    save_to = f"{location}{fn.removesuffix('.txt')}.html"
 
     # save html stats code to charts folder
     with open(save_to, "w") as sf:
