@@ -6,14 +6,14 @@ import swimclub
 
 app = Flask(__name__)
 app.secret_key = "12345"
-
+#Landing page for webapp
 @app.get("/")
 def index():
     return render_template(
         "index.html",
         title="Welcome to the Flipper swimclub system",
         )
-
+#Creates a glob instace session for swimmers dictionary
 def populate_data():
     if "swimmers" not in session:
         swim_files = os.listdir(swimclub.FOLDER)
@@ -26,6 +26,7 @@ def populate_data():
                 session["swimmers"][name] = []
             session["swimmers"][name].append(file)
 
+#Shows names for all swimmers in club
 @app.get("/swimmers")
 def display_swimmers():
     populate_data()
@@ -36,6 +37,7 @@ def display_swimmers():
         select_id="swimmer",
         data=sorted(session["swimmers"]), #returns list of all swimmer names 
         )
+#Shows swim html files associated with name 
 @app.post("/showfiles")
 def display_swimmer_files():
     populate_data()
@@ -47,7 +49,7 @@ def display_swimmer_files():
         select_id="file",
         data=session["swimmers"][name],
     )
-
+#Creates a barchart by fetching it from create module
 @app.post("/showbarchart")
 def show_bar_chart():
     file_id = request.form["file"]
