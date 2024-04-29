@@ -11,7 +11,7 @@ app.secret_key = "12345"
 def index():
     return render_template(
         "index.html",
-        title="Welcome to the Flipper swimclub system",
+        title="Welcome to Flipper",
         )
 #Creates a glob instace session for swimmers dictionary
 def populate_data():
