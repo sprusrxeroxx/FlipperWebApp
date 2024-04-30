@@ -9,7 +9,7 @@
 
     <select name="{{ select_id }}" id="{{ select_id}}">
         {% for name in data %}
-            <option value="{{ name }}">{{ name }}</option>
+            <option value="{{ name }}">{{ name.removesuffix(".txt").split("-", 2)[-1] }}</option>
         {% endfor %}
     </select>
 
