@@ -2,10 +2,12 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(160, 240, 240);
     margin: 10%;
+    text-align: center;
 }
 
 h2 {
     font-size: 150%;
+    text-align: center;
 }
 
 input[type=submit] {
