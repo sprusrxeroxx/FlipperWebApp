@@ -1,5 +1,5 @@
-                                                                | PROBLEM STATEMENT |
-=======================================================================================================================================================================
+#  PROBLEM STATEMENT 
+
 This is a project to help a local swimclub coach get easier access to the swim stats of all his swimmers.
 
 
@@ -12,9 +12,9 @@ So he's tasked me with helping him create a scalable means of doing this process
 
 So the idea is to build him a website where he can lookup any student's record and get the associated graph.
 
-===========================================================================================================================================================================
-                                                              | FLIPPER SYSTEM WEBAPP |
-===========================================================================================================================================================================
+
+##                                                               FLIPPER SYSTEM WEBAPP 
+
 
 The smartwatch formats the files like shown below:
 
