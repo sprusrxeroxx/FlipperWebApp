@@ -18,7 +18,7 @@ So the idea is to build him a website where he can lookup any student's record a
 
 The smartwatch formats the files like shown below:
 
-                                                              <swimmer>-<age>-<stroke>.txt
+    <swimmer>-<age>-<stroke>.txt
 
 
 
