@@ -1,8 +1,9 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(160, 240, 240);
+    background-color: rgb(79, 218, 236);
     margin: 10%;
     text-align: center;
+    background-image: linear-gradient(90deg, rgba(0, 162, 255, 0.726), rgb(120, 250, 250));
 }
 
 h2 {
@@ -13,7 +14,7 @@ h2 {
 input[type=submit] {
     width: 8em;
     color: white;
-    background-color: blue;
+    background-color: rgb(53, 127, 238);
     font-weight: bold;
 }
 
